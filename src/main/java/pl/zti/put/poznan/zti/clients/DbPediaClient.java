@@ -1,4 +1,4 @@
-package clients;
+package pl.zti.put.poznan.zti.clients;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;

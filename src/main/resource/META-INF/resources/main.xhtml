@@ -1,0 +1,56 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>
+        <ui:insert name="title">ZTI</ui:insert>
+    </title>
+</h:head>
+
+<h:body>
+    <h:outputStylesheet library="css" name="custom.css"/>
+    <div style="display: flex; width: 100%; min-height: 100vh; flex-direction: column; justify-content: space-between;">
+        <div>
+            <div style="margin:20px 350px 0 350px">
+                <div style="height: 50px; background-color: #dadada; display: flex; align-items: flex-end;">
+                    <div style="margin: 0 350px 0 350px">
+                        <div id="header-container">
+                            <div id="header">
+                                <h:outputText value="Broader Named Entity Identification and Linking"
+                                              style="font-size: 24"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="content-main">
+                    <h:form id="nerForm">
+                        <h:panelGrid id="nerPanel" columns="1">
+                            <p:inputTextarea rows="10" cols="100" value="#{nerBean.input}" autoResize="false"/>
+                            <p:commandButton value="Wyślij zapytanie" action="#{nerBean.identificate}"
+                                             update=":nerForm:nerPanel"/>
+                            <br/>
+                            <p:inputTextarea rows="10" cols="100" autoResize="false" value="#{nerBean.result}"/>
+                        </h:panelGrid>
+                    </h:form>
+
+                </div>
+            </div>
+        </div>
+        <div style="width:100%; background-color: #dadada;">
+            <div id="footer-container" style="margin:20px 350px 0 350px; ">
+                <div id="footer">
+                    <h:outputText value="Projekt z przedmiotu Zastosowanie Technologii Informatycznych"/>
+                    <br/>
+                    <h:outputText value="Projekt realizuja:"/>
+                    <br/>
+                    <h:outputText value="Jakub Kaszczyński Maciej Palicki"/>
+                    <br/>
+                    <h:outputText value="Mateusz Pilarczyk Piotr Popiołek"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>

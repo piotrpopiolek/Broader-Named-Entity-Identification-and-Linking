@@ -1,9 +1,11 @@
-import clients.DbPediaClient;
-import conventers.Converter;
+package pl.zti.put.poznan.zti;
+
+import pl.zti.put.poznan.zti.clients.DbPediaClient;
+import pl.zti.put.poznan.zti.conventers.Converter;
 
 import java.util.List;
 
-public class Identifdicator {
+public class Identificator {
     public static String identificate(String input) {
         try {
             List<String> data = StringReader.getStringFromData(input);

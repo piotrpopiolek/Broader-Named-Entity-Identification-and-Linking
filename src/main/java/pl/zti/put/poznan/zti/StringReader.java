@@ -1,3 +1,5 @@
+package pl.zti.put.poznan.zti;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;

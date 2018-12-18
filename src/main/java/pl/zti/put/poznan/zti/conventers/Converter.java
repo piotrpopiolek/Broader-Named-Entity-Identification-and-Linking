@@ -1,4 +1,4 @@
-package conventers;
+package pl.zti.put.poznan.zti.conventers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
